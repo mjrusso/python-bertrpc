@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-from bert import __version__ as version
+from bertrpc import __version__ as version
 
 setup(
     name = 'bertrpc',
