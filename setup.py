@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
-from bertrpc import __version__ as version
+__version__ = '0.1.0'
 
 setup(
     name = 'bertrpc',
     license='MIT',
-    version = version,
+    version = __version__,
     description = 'BERT-RPC Library',
     author = 'Michael J. Russo',
     author_email = 'mjrusso@gmail.com',
