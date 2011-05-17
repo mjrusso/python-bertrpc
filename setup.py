@@ -10,6 +10,7 @@ setup(
     author_email = 'mjrusso@gmail.com',
     url = 'http://github.com/mjrusso/python-bertrpc',
     packages = ['bertrpc'],
+    install_requires = ["erlastic", "bert"],
     classifiers = [
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
