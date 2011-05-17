@@ -4,6 +4,7 @@ from bertrpc import __version__ as version
 
 setup(
     name = 'bertrpc',
+    license='MIT',
     version = version,
     description = 'BERT-RPC Library',
     author = 'Michael J. Russo',
