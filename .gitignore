@@ -1,3 +1,4 @@
 build
+MANIFEST
 *.pyc
 .DS_Store

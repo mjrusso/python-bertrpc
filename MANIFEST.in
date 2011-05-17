@@ -1,0 +1,5 @@
+include README.markdown
+include LICENSE
+include MANIFEST.in
+include tests.py
+
