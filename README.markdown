@@ -13,26 +13,9 @@ This library currently only supports the following BERT-RPC features:
 Installation
 ------------
 
-* Install the dependencies:
+Install from PyPI:
 
-    * erlastic
-
-            $> git clone git://github.com/samuel/python-erlastic.git
-            $> cd python-erlastic
-            $> python setup.py install
-
-    * bert
-
-            $> git clone git://github.com/samuel/python-bert.git
-            $> cd python-bert
-            $> python setup.py install
-
-* Install this library:
-
-        $> git clone git://github.com/mjrusso/python-bertrpc.git
-        $> cd python-bertrpc
-        $> python setup.py install
-
+    easy_install bertrpc
 
 Examples
 --------
