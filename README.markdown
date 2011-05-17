@@ -1,7 +1,5 @@
-BERTRPC 
+BERTRPC
 =======
-
-By Michael J. Russo (mjrusso at gmail dot com)
 
 A BERT-RPC client library for Python.  A port of Tom Preston-Werner's [Ruby library](http://github.com/mojombo/bertrpc).
 
@@ -39,16 +37,12 @@ Installation
 Examples
 --------
 
---- 
-
 Import the library and create an RPC client:
 
     import bertrpc
     service = bertrpc.Service('localhost', 9999)
-    
----    
-    
-Make a call:
+
+### Make a call:
 
     response = service.request('call').calc.add(1, 2)
     
@@ -59,9 +53,7 @@ Note that the underlying BERT-RPC transaction of the above call is:
     
 In this example, the value of the `response` variable is `3`.
 
----
-    
-Make a cast:
+### Make a cast:
 
     service.request('cast').stats.incr()
 
@@ -69,17 +61,15 @@ Note that the underlying BERT-RPC transaction of the above cast is:
 
     -> {cast, stats, incr, []}
     <- {noreply}
-    
-The value of the `response` variable is `None` for all successful cast calls.
 
---- 
+The value of the `response` variable is `None` for all successful cast calls.
 
 Running the unit tests
 ----------------------
 
 To run the unit tests, execute the following command from the root of the project directory:
 
-    python tests.py 
+    python tests.py
 
 Copyright
 ---------
