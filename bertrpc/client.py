@@ -97,8 +97,14 @@ class Action(object):
             lenheader = sock.recv(4)
             if lenheader is None: raise error.ProtocolError(error.ProtocolError.NO_HEADER)
             length = struct.unpack(">l",lenheader)[0]
-            bert_response = sock.recv(length)
-            if bert_response is None or len(bert_response) == 0: raise error.ProtocolError(error.ProtocolError.NO_DATA)
+
+            bert_response = ''
+            while len(bert_response) < length:
+                response_part = sock.recv(length - len(bert_response))
+                if response_part is None or len(response_part) == 0:
+                    raise error.ProtocolError(error.ProtocolError.NO_DATA)
+                bert_response += response_part
+
             sock.close()
             return bert_response
         except socket.timeout, e:
